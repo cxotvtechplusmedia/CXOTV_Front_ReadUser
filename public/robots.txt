@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://cxotv.techplusmedia.com/sitemap.xml
+Sitemap: https://cxotv.techplusmedia.com/news-sitemap.xml
+Sitemap: https://cxotv.techplusmedia.com/rss.xml
