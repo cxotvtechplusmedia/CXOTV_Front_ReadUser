@@ -77,9 +77,9 @@ const LatestNews = () => {
                                     />
                                 </div>
                                 <div className="noto-text lg:flex flex-col gap-1 lg:w-[55%]">
-                                    <p className="text-[14px] lg:py-0 py-4 leading-5 lg:h-20 overflow-y-hidden font-noto font-normal hover:text-[#7B5FF4] transition-all duration-200 overflow-hidden">
+                                    <h2 className="text-[14px] lg:py-0 py-4 leading-5 lg:h-20 overflow-y-hidden font-noto font-normal hover:text-[#7B5FF4] transition-all duration-200 overflow-hidden">
                                         {item.attributes.title}
-                                    </p>
+                                    </h2>
                                     <p className="font-bold text-[13px] text-[#999999]">
                                         {item.attributes.Date
                                             ? timeAgo(item.attributes.Date)

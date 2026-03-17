@@ -28,6 +28,7 @@ import FollowBar from "./FollowBar";
 
 // Utils & Assets
 import timeAgo from "@/utils/dateConverter";
+import { generateArticleStructuredData } from "@/utils/seoUtils";
 
 const SingleNews = () => {
     const pathname = usePathname();
@@ -213,8 +214,14 @@ const SingleNews = () => {
         return `/${normalizedBase}/${slug}`;
     };
 
+    const structuredData = generateArticleStructuredData(data, nameBeforeId);
+
     return (
         <>
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+            />
             <h1 className="sr-only">
                 Latest Technology News - CXOTV Today & Tech Updates
             </h1>
@@ -525,9 +532,9 @@ const SingleNews = () => {
                                                     <div className="h-full w-full bg-gray-100 rounded-md" />
                                                 )}
                                             </div>
-                                            <div className="text-sm font-semibold pb-2">
+                                            <h3 className="text-sm font-semibold pb-2">
                                                 {item.attributes?.title}
-                                            </div>
+                                            </h3>
                                         </div>
                                     );
 
