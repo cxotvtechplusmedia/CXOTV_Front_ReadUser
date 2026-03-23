@@ -62,7 +62,7 @@ const HomeSlider = ({ category, names }) => {
                         Trending Now
                     </p>
                     <Link
-                        href={`/${category.split(" ").join("-")}/${firstFourItems[0].attributes.slug}`}
+                        href={`/${category.split(" ").join("-").toLowerCase()}/${firstFourItems[0].attributes.slug}`}
                         className="lg:flex flex-col h-full"
                     >
                         {status === "loading" ? (
@@ -82,7 +82,7 @@ const HomeSlider = ({ category, names }) => {
                                 {firstFourItems.map((ele) => (
                                     <SwiperSlide key={ele.id}>
                                         <div className="relative w-full h-full border-8 border-slate-100">
-                                            <Link href={`/${category.split(" ").join("-")}/${ele.attributes.slug}`}>
+                                            <Link href={`/${category.split(" ").join("-").toLowerCase()}/${ele.attributes.slug}`}>
                                                 <Image
                                                     src={
                                                         ele.attributes.image.data.attributes.formats
@@ -137,7 +137,7 @@ const HomeSlider = ({ category, names }) => {
                                             return (
                                                 <div key={index} className="font-fira w-full flex flex-col justify-between h-full">
                                                     <h6 className="text-sm font-semibold text-center mb-2">{names[index]}</h6>
-                                                    <Link href={`/${names[index].replace(/\s+/g, "-")}/${item.news.attributes.slug}`}>
+                                                    <Link href={`/${names[index].replace(/\s+/g, "-").toLowerCase()}/${item.news.attributes.slug}`}>
                                                         <div className="relative border-8 border-slate-100 shadow-md h-full">
                                                             <Image
                                                                 src={
