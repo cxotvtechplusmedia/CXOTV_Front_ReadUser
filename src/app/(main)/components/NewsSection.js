@@ -95,7 +95,7 @@ const NewsSection = ({ categoryData }) => {
                                 <div className="h-1 w-20 bg-[#4601FA]"></div>
                             </div>
                             <a
-                                href={`/${categoryName.replace(/\s+/g, "-")}`}
+                                href={`/${categoryName.replace(/\s+/g, "-").toLowerCase()}`}
                                 className="sansfont-tech border border-blue-800 lg:px-6 px-3 py-1 text-blue-800 font-bold"
                             >
                                 See More
@@ -192,7 +192,7 @@ const AdComponent = ({ adName }) =>
 
 const ArticleComponent = ({ item, categoryName }) => (
     <div className="w-full">
-        <Link href={`/${categoryName.replace(/\s+/g, "-")}/${item.attributes.slug}`}>
+        <Link href={`/${categoryName.replace(/\s+/g, "-").toLowerCase()}/${item.attributes.slug}`}>
             <Image
                 src={
                     REACT_APP_UPLOAD_URL +

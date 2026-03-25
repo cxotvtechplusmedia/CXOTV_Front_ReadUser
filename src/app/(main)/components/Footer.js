@@ -143,7 +143,7 @@ const Footer = () => {
                         </div>
                         <div className="sansfont-tech flex flex-col lg:gap-2 gap-1 cursor-pointer">
                             {resourceItems.map((r, i) => (
-                                <Link key={i} href={`/${r.split(" ").join("-")}`}>
+                                <Link key={i} href={`/${r.split(" ").join("-").toLowerCase()}`}>
                                     <div className="flex gap-1 items-center">
                                         <MdKeyboardArrowRight /> <p>{r}</p>
                                     </div>
@@ -189,7 +189,7 @@ const Footer = () => {
                                     c.url.startsWith("https") ? (
                                         <a
                                             key={i}
-                                            href={c.url}
+                                            href={c.url.toLowerCase()}
                                             target="_blank"
                                             rel="noopener noreferrer"
                                             className="flex gap-1 items-center"
@@ -197,7 +197,7 @@ const Footer = () => {
                                             <MdKeyboardArrowRight /> <p>{c.name}</p>
                                         </a>
                                     ) : (
-                                        <Link key={i} href={c.url}>
+                                        <Link key={i} href={c.url.toLowerCase()}>
                                             <div className="flex gap-1 items-center">
                                                 <MdKeyboardArrowRight /> <p>{c.name}</p>
                                             </div>
@@ -231,7 +231,7 @@ const Footer = () => {
                                         );
                                     } else {
                                         return (
-                                            <Link key={i} href={`/${d.split(" ").join("-")}`}>
+                                            <Link key={i} href={`/${d.split(" ").join("-").toLowerCase()}`}>
                                                 <div className="flex gap-1 items-center">
                                                     <MdKeyboardArrowRight /> <p>{d}</p>
                                                 </div>
@@ -272,7 +272,7 @@ const Footer = () => {
                             </div>
                             <div className="sansfont-tech flex flex-col lg:gap-2 gap-1 cursor-pointer">
                                 {chatSeriesItems.map((ch, i) => (
-                                    <Link key={i} href={`/${ch.split(" ").join("-")}`}>
+                                    <Link key={i} href={`/${ch.split(" ").join("-").toLowerCase()}`}>
                                         <div className="flex gap-1 items-center">
                                             <MdKeyboardArrowRight /> <p>{ch}</p>
                                         </div>

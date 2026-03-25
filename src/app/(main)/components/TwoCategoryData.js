@@ -61,13 +61,13 @@ const TwoCategoryData = ({ categoriesWithHeadings, active }) => {
 
                 const categoryLink =
                     firstItem.category && firstItem.category.categoryName
-                        ? `/${firstItem.category.categoryName.replace(/\s+/g, "-")}/${firstItem.attributes.title}`
-                        : `/${name.replace(/\s+/g, "-")}/${firstItem.attributes.slug}`;
+                        ? `/${firstItem.category.categoryName.replace(/\s+/g, "-").toLowerCase()}/${firstItem.attributes.title}`
+                        : `/${name.replace(/\s+/g, "-").toLowerCase()}/${firstItem.attributes.slug}`;
 
                 const categoryLinkSeeMore =
                     firstItem.category && firstItem.category.categoryName
-                        ? `/${firstItem.category.categoryName.replace(/\s+/g, "-")}`
-                        : `/${name.replace(/\s+/g, "-")}`;
+                        ? `/${firstItem.category.categoryName.replace(/\s+/g, "-").toLowerCase()}`
+                        : `/${name.replace(/\s+/g, "-").toLowerCase()}`;
 
                 return (
                     <div key={name} className="lg:flex flex-col gap-2 w-full">

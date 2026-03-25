@@ -76,7 +76,7 @@ const Section = ({ names }) => {
                         {names[nameIndex]}
                     </p>
                     <Link
-                        href={`/${names[nameIndex].replace(/\s+/g, "-")}/${item.news.attributes.slug
+                        href={`/${names[nameIndex].replace(/\s+/g, "-").toLowerCase()}/${item.news.attributes.slug
                             }`}
                     >
                         <div className="relative border-8 border-slate-100 shadow-md">
